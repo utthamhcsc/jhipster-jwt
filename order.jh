@@ -1,0 +1,70 @@
+
+application {
+  config {
+    baseName myApp,
+    applicationType monolith,
+    packageName com.order,
+   
+    prodDatabaseType mysql,
+    clientFramework react
+  }
+  entities *
+  dto * with mapstruct
+  service * with serviceClass
+  service * with serviceImpl
+  paginate * with pagination
+  paginate * with infinite-scroll
+}
+
+entity OrderItem {
+itemId String required
+qty Double required
+amount Double required
+itemInfo String
+storeId String 
+discount Double
+serviceCharge Double
+orderStatus OrderStatus
+paymentStatus PaymentStatus
+invoiceIds String
+invoiceInfo String
+dueAmount Double
+}
+enum PaymentStatus{
+PAID
+HALF_PAID
+PENDING
+}
+enum OrderStatus{
+CREATED
+PENDING
+DISPATCHED
+DELIVERD
+COMPLETED
+PAID
+}
+
+entity Order{
+userId String
+contactPersonName String
+contactNumber String
+alternateNumber String
+serviceCharge Double
+invoiceDiscount Double
+discount Double
+isFromGlobalStore Boolean
+billingAddress String
+billingLocation String
+delivaryAddress String
+delivaryLocation String
+details String
+serviceCharge Double
+orderStatus OrderStatus
+paymentStatus PaymentStatus
+invoiceIds String
+invoiceInfo String
+dueAmount Double
+}
+relationship OneToMany{
+Order to OrderItem
+}
