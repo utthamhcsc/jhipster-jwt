@@ -1,0 +1,97 @@
+{
+  "applications": ["myApp"],
+  "changelogDate": "20220513080741",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "jhi_order",
+  "fields": [
+    {
+      "fieldName": "userId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "contactPersonName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "contactNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "alternateNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "serviceCharge",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "invoiceDiscount",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "discount",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "isFromGlobalStore",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "billingAddress",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "billingLocation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "delivaryAddress",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "delivaryLocation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "details",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "orderStatus",
+      "fieldType": "OrderStatus",
+      "fieldValues": "CREATED,PENDING,DISPATCHED,DELIVERD,COMPLETED,PAID"
+    },
+    {
+      "fieldName": "paymentStatus",
+      "fieldType": "PaymentStatus",
+      "fieldValues": "PAID,HALF_PAID,PENDING"
+    },
+    {
+      "fieldName": "invoiceIds",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "invoiceInfo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dueAmount",
+      "fieldType": "Double"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Order",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "orderItem",
+      "otherEntityRelationshipName": "order",
+      "relationshipName": "orderItem",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

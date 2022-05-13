@@ -1,0 +1,10 @@
+{
+  "myApp": {
+    "PaymentStatus": {
+      "null": "",
+      "PAID": "PAID",
+      "HALF_PAID": "HALF_PAID",
+      "PENDING": "PENDING"
+    }
+  }
+}
