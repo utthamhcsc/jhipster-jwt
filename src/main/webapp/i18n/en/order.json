@@ -1,0 +1,42 @@
+{
+  "myApp": {
+    "order": {
+      "home": {
+        "title": "Orders",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Order",
+        "createOrEditLabel": "Create or edit a Order",
+        "notFound": "No Orders found"
+      },
+      "created": "A new Order is created with identifier {{ param }}",
+      "updated": "A Order is updated with identifier {{ param }}",
+      "deleted": "A Order is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Order {{ id }}?"
+      },
+      "detail": {
+        "title": "Order"
+      },
+      "id": "ID",
+      "userId": "User Id",
+      "contactPersonName": "Contact Person Name",
+      "contactNumber": "Contact Number",
+      "alternateNumber": "Alternate Number",
+      "serviceCharge": "Service Charge",
+      "invoiceDiscount": "Invoice Discount",
+      "discount": "Discount",
+      "isFromGlobalStore": "Is From Global Store",
+      "billingAddress": "Billing Address",
+      "billingLocation": "Billing Location",
+      "delivaryAddress": "Delivary Address",
+      "delivaryLocation": "Delivary Location",
+      "details": "Details",
+      "orderStatus": "Order Status",
+      "paymentStatus": "Payment Status",
+      "invoiceIds": "Invoice Ids",
+      "invoiceInfo": "Invoice Info",
+      "dueAmount": "Due Amount",
+      "orderItem": "Order Item"
+    }
+  }
+}
